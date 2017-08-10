@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquey对象</title>
+		<script src="jquery-easyui-1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $cr=$("#cr");//jquery对象
+				$cr.click(function(){
+					if($cr.is(":checked")){
+						alert("感觉你的支持，您可以继续访问");
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" id="cr"/>
+		<label for="cr">我已经阅读了上面制度.</label>
+	</body>
+</html>

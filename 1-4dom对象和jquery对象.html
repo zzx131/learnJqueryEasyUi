@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dom对象和jquery对象的区别</title>
+		<script src="jquery-easyui-1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				/*var domObj =document.getElementsByTagName("h3")[0];//Dom对象
+				var $jqueryObject =$(domObj);//jquery对象
+				alert("Dom对象："+domObj.innerHTML);
+				alert("jquery对象"+$jqueryObject.html());*/
+				var $h3Object=$('h3');
+				alert("jquery对象"+$h3Object.html());
+			});
+		</script>
+	</head>
+	<body>
+		<h3>例子</h3>
+		<p title="选择你最喜欢的水果.">选择你最喜欢的水果?</p>
+		<ul>
+			<li>苹果</li>
+			<li>橘子</li>
+			<li>菠萝</li>
+		</ul>
+	</body>
+</html>

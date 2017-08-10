@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery的选择器</title>
+		<script src="jquery-easyui-1.5.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			function demo(){
+				alert("hello word");
+			} 
+		</script>
+	</head>
+	<body>
+		<!--
+        	作者：763963530@qq.com
+        	时间：2017-08-06
+        	描述：这样做不是太好，没有将网页与行为进行分离
+        -->
+		<p onclick="demo()">点击我，使用了onclick方法进行执行点击</p>
+		<p class="demo">点击我</p>
+		<!--
+        	作者：763963530@qq.com
+        	时间：2017-08-06
+        	描述：jquery执行的顺序，${function(){}};这个是文档刚刚加载的
+        	时候就开始执行的，代码执行的顺序是从上向下执行。如果将js代码写
+        	到最上面可能就找不到文件。
+        -->
+		<script type="text/javascript">
+			$(".demo").click(
+				function(){
+					alert("hello word");
+				}
+			)
+		</script>
+	</body>
+</html>

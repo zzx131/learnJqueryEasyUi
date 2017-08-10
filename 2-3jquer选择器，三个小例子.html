@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquer选择器</title>
+		<script type="text/javascript" src="jquery-easyui-1.5.2/jquery.min.js"></script>
+		<script type="text/x-javascript">
+			$(function(){
+				$("#tb tbody tr:even").css("background-color","#888888");
+				getCheckNumber();
+			});
+			function getCheckNumber(){
+				$("#btn").click(function(){
+					var items = $("input[name='check']:checked");
+					alert("选中的个数为:"+items.length);
+				});
+			}
+        </script>
+	</head>
+	<body>
+		<!--
+        	作者：763963530@qq.com
+        	时间：2017-08-06
+        	描述：1，给网页中的所有<p>添加onclick()事件，获取元素，并且给元素添加行为
+        -->
+        <p>测试1</p>
+        <p>测试2</p>
+        <script type="text/javascript">
+        	$("p").click(function(){
+        		alert("你好啊，jquery!")
+        	});
+        </script>
+        
+        <!--
+        	作者：763963530@qq.com
+        	时间：2017-08-06
+        	描述：代码2，给定一个特定的表格
+        	隔行变色。$("#tb tbody tr:even").css("background-color","#888888");
+        	表格的特殊选择器会在接下来进行学习。
+        -->
+        <table id="tb">
+        	<tbody>
+        		<tr>
+        			<td>第一行</td>
+        			<td>第一行</td>
+        		</tr>
+        		<tr>
+        			<td>第二行</td>
+        			<td>第二行</td>
+        		</tr>
+        		<tr>
+        			<td>第三行</td>
+        			<td>第三行</td>
+        		</tr>
+        		<tr>
+        			<td>第四行</td>
+        			<td>第四行</td>
+        		</tr>
+        	</tbody>
+        </table>
+        
+        <!--
+        	作者：763963530@qq.com
+        	时间：2017-08-06
+        	描述：输出多选框进行操作，输出选中的多选框的个数
+        	var items = $("input[name='check']:checked");
+        -->
+        <input type="checkbox" value="1" name="check" checked="checked" />
+        <input type="checkbox" value="2" name="check" />
+        <input type="checkbox" value="3" name="check" checked="checked" />
+        <input type="button" value="你选中的个数" id="btn" />
+        
+	</body>
+</html>
